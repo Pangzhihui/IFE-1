@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>flex布局练习</title>
+	<meta http-equiv="X-UA-Comatible" content="IE=Edge">
+	<link rel="stylesheet" href="flex.css">
+</head>
+<body>
+	<div class="hd">
+		<div class="nav">
+			<img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/nav.png?raw=true" alt="图片未加载">
+			<div class="nav-list">
+				<ul id="list">
+					<li>
+						HOME
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>		
+						PRODUCT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>
+						SUPPORT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>		
+						ABOUT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="bn-1">
+			<div class="bn-text">
+				<p class="text-sm">HELLO</p>
+				<P class="text-sm">WORLD</P>
+				<P class="text-lg">PRODUCE</P>
+			</div>
+		</div>
+		<div class="bn-2">
+		</div>
+	</div>
+	<div class="ct">
+		<div class="articles">
+			<div class="box">
+				<div class="box-tt">
+					<p class="box-tt-1">One</p>
+					<p class="box-tt-2">Level1 Title</p>
+				</div>
+				<img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/head1.png?raw=true">
+				<div class="box-ct">
+					1、昔我往矣,杨柳依依；今我来思,雨雪霏霏.
+					译：回想当初出征时,杨柳轻轻飘动.如今回家的途中,雪花粉粉飘落. <br/>
+					2、知我者,谓我心忧,不知我者,谓我何求.
+				</div>
+
+			</div>
+			<div class="box box-2">
+				<div class="box-tt">
+					<p class="box-tt-1">Two</p>
+					<p class="box-tt-2">Level2 Title</p>
+				</div>
+				<img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/head2.png?raw=true">
+				<div class="box-ct">
+					3、一日不见,如三秋兮.<br> 
+					4、青青子衿,悠悠我心.<br> 
+					译：你的衣领青又青,悠悠思君伤我心.<br>
+					5、所谓伊人,在水一方.<br> 
+					6、巧笑倩兮,美目盼兮.
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-tt">
+					<p class="box-tt-1">Three</p>
+					<p class="box-tt-2">Level3 Title</p>
+				</div>
+				<img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/head3.png?raw=true">
+				<div class="box-ct">
+					8、他山之石,可以攻玉.<br> 
+					9、靡不有初,鲜克有终. <br>
+					10、桃之夭夭,灼灼其华.<br> 
+					译：桃树繁茂,桃花灿烂. <br>
+				</div>
+			</div>
+		</div>
+		<div class="sld" id="sld">
+			<ul id="img" class="img">
+				<li><img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/scroll.png?raw=true"></li>
+				<li><img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/scroll2.png?raw=true"></li>
+				<li><img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/scroll3.png?raw=true"></li>
+				<li><img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/scroll1.png?raw=true"></li>
+				<li><img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/scroll.png?raw=true"></li>
+			</ul>
+			<ul id="order" class="order">
+			    <li class="on"></li>
+			    <li></li>
+			    <li></li>
+			    <li></li>
+			</ul>
+		</div>
+		<div class="tab">
+			<div class="tab-hd">
+				<div class="tab-lst active">TABONE</div>
+				<div class="tab-lst">TABTWO</div>
+				<div class="tab-lst">TABTRD</div>
+				<div class="tab-lst">TABFOR</div>
+			</div>
+			<div class="tb show">
+				<p class="tb-tt">Table Caption</p>
+				<table>
+					<thead>
+					    <tr>
+					        <th></th>
+					        <th>Free Version</th>
+		  				    <th>Personal Version</th>
+		 				    <th>Company Version</th>
+					    </tr>
+					</thead>
+					<tbody>
+						<tr>
+					        <td>Feature A</td>
+					        <td>Bangalore</td>
+					        <td>560001</td>
+					        <td>some text some text some text some text</td>
+					    </tr>
+					    <tr>
+					        <td>Feature B</td>
+					        <td>Mumbai</td>
+					        <td>400003</td>
+					        <td>邮编</td>
+					    </tr>
+					    <tr>
+					        <td>Feature C</td>
+					        <td>Pune</td>
+					        <td>411027</td>
+					        <td>邮编</td>
+					    </tr>
+				        <tr>
+					        <td>Feature D</td>
+					        <td>Pune</td>
+					        <td>411027</td>
+					        <td>邮编</td>
+					    </tr>
+						<tr>
+					        <td>PRICE</td>
+					        <td class="price-1">Free</td>
+					        <td class="price-2">
+						      	<span>$9.99/</span>
+						      	<sup>mo</sup>
+					        </td>
+					        <td class="price-3">
+					            <span>$99.99/</span>
+						      	<sup>mo</sup> 
+					        </td>
+					    </tr>
+					</tbody>
+				    
+				</table>
+			</div>
+			<div class="tb">
+				<p>Hello World</p>
+			</div>
+			<div class="tb">
+				<p>Hello JavaScript</p>
+			</div>
+			<div class="tb">
+				<p>Hello CSS</p>
+			</div>
+		</div>
+		<div class="info">
+			<div class="fm">
+				<select class="fm-sel" id="country">
+					<option disabled selected hidden>select your country</option>
+					<option value="0">无</option>
+					<option value="1">中国</option>
+					<option value="2">美国</option>
+					<option value="3">英国</option>
+				</select>
+				<select class="fm-sel" id="city">
+					<option disabled selected hidden>select your city</option>
+					
+				</select>
+				<div>
+					<input class="fm-ipt" type="text" placeholder="input your email address">
+					<button  type="button" class="btn">submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ft">
+		<span>&copy;&nbsp;2017IFE</span>
+	</div>
+	<script src="flex.js"></script>
+</body>
+</html>
