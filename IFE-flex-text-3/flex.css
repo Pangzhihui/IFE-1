@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: MicroSoft YaHei;
+}
+.hd {
+	width: 100%;
+	height: 80px;
+	background: #000;
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	height: 100%;	
+}
+.nav-list {
+	display: flex;
+	justify-content: flex-end;
+}
+.nav-list ul li {
+	position: relative;
+	margin-left: 50px;
+	background:
+ 		url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/arrow.png?raw=true)
+  		100% 50% no-repeat;
+	padding-right: 30px;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 16px;
+	height :80px;
+	line-height :80px;
+	display: inline-block;
+	list-style: none;
+}
+.list {
+	position: absolute;
+    width: 130px;
+    list-style: none;
+    top: 80px;
+    right: 0;
+    z-index: 999;
+    background-color: #303030;
+    padding-right: 10px;
+    display: none;
+}
+.list p {
+	line-height :30px;
+	text-align: right;
+}
+.banner {
+	display: flex;
+	justify-content: center;
+	background: #2D7079;
+	width: 100%;
+	height: 260px;
+}
+.bn-1,
+.bn-2 {
+	flex: 1;
+}
+.bn-1 {
+	position: relative;
+	background:
+		url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/left.png?raw=true)
+		100% 50% no-repeat;
+}
+.bn-2 {
+	background:
+		url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/right.png?raw=true)
+		0 50% no-repeat;
+}
+.bn-text {
+	position: absolute;
+	width: 480px;
+	top: 50px;
+	right: 0;
+	color: #fff;
+}
+.text-sm {
+	font-size: 32px;
+	opacity: .5;
+}
+.text-lg {
+	font-size: 44px;
+}
+.ct {
+	width: 960px;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+.nav-v {
+	float: left;
+	width: 200px;
+	padding: 20px 30px;
+	background: #DEDEDE;
+	overflow-y: scroll;
+}
+.nav-v p {
+	line-height: 35px;
+}
+.table {
+	float: right;
+	width: 70%;
+}
+.tb {
+	width: 95%;
+	border-collapse: collapse;
+	word-wrap: break-word; 
+	word-break: break-all;
+}
+.thd {
+	background: #DEDEDE;
+	position: static;
+}
+th,
+td {
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #808080;	
+	height: 30px;
+	line-height: 35px;
+}
+.price-1 {
+	color: #568522;
+}
+.price-2 {
+	color: #4A90E2;
+}
+.price-3 {
+	color: #D6273D;
+}
+.ft{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+}
+
+.fixnav {
+	position: fixed;
+	top:0;
+	z-index:99;
+	background: #DEDEDE;
+}
+
