@@ -73,7 +73,7 @@ for(var i = 0;i < 13;i++) {
 
 nav.addEventListener('click',function(e){
 	if(e.target&&e.target.nodeName.toUpperCase()=='P'){
-		var show = e.target.nextElementSiblingSibling.style.display;
+		var show = e.target.nextElementSibling.style.display;
 		if(show != null && show != 'block')	{
 			e.target.nextElementSibling.style.display = 'block';
 		}
