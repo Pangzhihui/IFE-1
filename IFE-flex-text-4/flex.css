@@ -131,9 +131,8 @@
 	word-wrap: break-word; 
 	word-break: break-all;
 }
-.thd {
+tr:nth-child(odd)>td,th {
 	background: #DEDEDE;
-	position: static;
 }
 th,
 td {
