@@ -17,5 +17,7 @@ IFE-flex-text-3 对应任务24/66
 IFE-flex-text-4 对应任务29/66
 左侧导航栏及其二级菜单和右侧表格用JSON动态生成，遮罩蒙层效果及从弹出框的具体要求参见任务
 
-IFE-flex-text-5 中的样式表使用less写的,但是真正运行的时候是把less又转换成了css
+IFE-flex-text-5 中的样式表使用less写的，主要用了less的变量和嵌入,但是真正运行的时候是把less又转换成了css
+
+IFE-flex-text-6 中的样式表使用sass写的，主要用了sass的变量、嵌入和mixin,但是真正运行的时候是把sass又转换成了css
 
