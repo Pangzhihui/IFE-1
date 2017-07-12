@@ -1,0 +1,215 @@
+$height: 80px;
+$width: 960px;
+$margin: auto;
+$percent: 100%;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: MicroSoft YaHei;
+}
+
+.hd {
+	width: $percent;
+	height: $height;
+	background: #000;
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: $margin;
+	margin-right: $margin;
+	width: $width;
+	height: $percent;	
+	.nav-list {
+		display: flex;
+		justify-content: flex-end;
+	    li {
+			position: relative;
+			margin-left: 50px;
+			background:
+		 		url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/arrow.png?raw=true)
+		  		100% 50% no-repeat;
+			padding-right: 30px;
+			padding-left: 10px;
+			color: #fff;
+			font-size: 16px;
+			height :$height;
+			line-height :$height;
+			display: inline-block;
+			list-style: none;
+			.list {
+                position: absolute;
+                width: 130px;
+                list-style: none;
+                top: $height;
+                right: 0;
+                z-index: 999;
+                background-color: #303030;
+                padding-right: 10px;
+                display: none;
+                p {
+                    line-height :30px;
+                    text-align: right;
+                }
+            }
+			
+		}
+		
+	}
+}
+.banner {
+	display: flex;
+	justify-content: center;
+	background: #2D7079;
+	width: $percent;
+	height: 260px;
+	margin-bottom: 20px;
+	.bn-1 {
+		flex: 1;
+		position: relative;
+		background:
+			url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/left.png?raw=true)
+			100% 50% no-repeat;
+		.bn-text {
+			position: absolute;
+			width: 480px;
+			top: 50px;
+			right: 0;
+			color: #fff;
+			.text-sm {
+				font-size: 32px;
+				opacity: .5;
+			}
+			.text-lg {
+				font-size: 44px;
+			}
+		}
+		
+	}
+	.bn-2 {
+		flex: 1;
+		background:
+			url(https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/right.png?raw=true)
+			0 50% no-repeat;
+	}
+}
+//sass混入
+@mixin nav-text {
+    line-height: 35px;
+    padding: 10px 30px 5px 30px;
+    cursor:pointer;
+    display: block;
+}
+.ct {
+	width: $width;
+	overflow: $margin;
+	margin-left: $margin;
+	margin-right: $margin;
+	margin-bottom: 30px;
+	.nav-v {
+		float: left;
+		width: 250px;
+		background: #DEDEDE;
+		overflow-y: scroll;
+		border: 1px solid #DDD;
+		p {
+	       @include nav-text;
+		}
+	}
+}
+.subnav {
+	background: #FFF;
+	text-align: center;
+	display: none;
+	span {
+		@include nav-text;
+	}
+}
+.table {
+	float: right;
+	width: 65%;
+	.tb {
+		width: 95%;
+		border-collapse: collapse;
+		word-wrap: break-word; 
+		word-break: break-all;
+		th,
+		td {
+			font-size: 14px;
+			text-align: center;
+			border: 1px solid #808080;	
+			height: 30px;
+			line-height: 35px;
+		}
+	}
+}
+tr:nth-child(odd)>td,th {
+	background: #DEDEDE;
+}
+
+.ft{
+	width: $percent;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+}
+
+.fixnav {
+	position: fixed;
+	top:0;
+	background: #DEDEDE;
+	z-index: 2;
+}
+.btn-edit {
+	margin-right:10px;
+}
+.edit,.delete {
+	position: fixed;
+	top:300px;
+	left:300px;
+	height:150px;
+	width:250px;
+	padding: 20px 30px;
+	border: 1px solid #DDD;
+	background: #FFF;	
+	z-index: 999;
+	display: none;
+}
+label {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.edit input {
+	border: 1px solid #DDD;	
+}
+.edit-btn,.del-btn {
+	width: 190px;
+	margin:20px auto;
+}
+.edit-sure,.del-sure,.edit-no,.del-no {
+	width: 80px;
+	height:40px;
+	background: #FFF;
+	border: 1px solid #DDD;
+}
+.edit-sure,.del-sure {
+	margin-right: 30px;
+}
+.tips {
+	text-align: center;
+	height:60px;
+	margin-top: 20px;
+}
+.cover {
+	width: $percent;
+    height: $percent;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99;
+    background-color:#000;
+    opacity:0.5;
+    display: none;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>flex布局练习</title>
+	<meta http-equiv="X-UA-Comatible" content="IE=Edge">
+	<link rel="stylesheet" href="flex.css">
+</head>
+<body>
+	<div class="hd">
+		<div class="nav">
+			<img src="https://github.com/Pangzhihui/test/blob/master/%E7%BF%BB%E8%AF%91/test/nav.png?raw=true" alt="图片未加载">
+			<div class="nav-list">
+				<ul id="list">
+					<li>
+						HOME
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>		
+						PRODUCT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>
+						SUPPORT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+					<li>		
+						ABOUT
+						<div class="list">	
+							<p>test A</p>
+							<p>test B</p>
+							<p>test C</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="bn-1">
+			<div class="bn-text">
+				<p class="text-sm">HELLO</p>
+				<P class="text-sm">WORLD</P>
+				<P class="text-lg">PRODUCE</P>
+			</div>
+		</div>
+		<div class="bn-2">
+		</div>
+	</div>
+	<div class="ct">
+		<div class="nav-v" id="nav-v">
+			<p>Level 1 some text</p>
+			<!--<div class="subnav">
+				<span>Level 2 some text</span>
+				<span>Level 2 some text</span>
+			</div>-->
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+			<p>Level 1 some text</p>
+		
+		</div>
+		<div class="table">
+			<table class="tb">
+				    <!--<tr id="thd" class="thd">
+				        <th>Name</th>
+				        <th>Content</th>
+	  				    <th>Value</th>
+	 				    <th>Operate</th>
+				    </tr>
+					<tr>
+				        <td>Name Text</td>
+				        <td>Content Text</td>
+				        <td>1234</td>
+				        <td><button class='btn-edit'>编辑</button><button class='btn-del'>删除</button></td>
+				    </tr>-->
+				    
+			</table>
+		</div>	
+	</div>
+	<div class="ft">
+		<span>&copy;&nbsp;2017IFE</span>
+	</div>
+	<div class="edit">
+		<div>
+			<input type="text" id="id" style="display: none;">
+			<label>name<input type="text" id="name"></label>
+			<label>content<input type="text" id="content"></label>
+			<label>value<input type="text" id="value"></label>
+		</div>
+		<div class="edit-btn">
+			<button class="edit-sure" id="edit-sure">确定</button><button class="edit-no" id="edit-no">取消</button>
+		</div>
+	</div>
+	<div class="delete">
+		<div class="tips">
+			<input type="text" id="del-id" style="display: none;">
+			确定要删除吗？
+		</div>
+		<div class="del-btn">
+			<button class="del-sure" id="del-sure">确定</button><button class="del-no" id="del-no">取消</button>
+		</div>
+	</div>
+	<div class="cover">
+		
+	</div>
+	<script src="datat.js"></script>
+	<script src="datav.js"></script>
+	<script src="flex.js"></script>
+</body>
+</html>
