@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: "microsoft yahei";
+}
+.hd {
+  width: 100%;
+  padding: 10px 0px;
+  background: #000000;
+  overflow: auto;
+}
+.hd .logo {
+  font-size: 3.2rem;
+  color: #FFFFFF;
+  float: left;
+  margin-left: 40px;
+}
+.hd .menu {
+  float: right;
+  margin-right: 40px;
+}
+.hd .menu span {
+  margin-left: 1rem;
+  font-size: 3.2rem;
+  color: #FFFFFF;
+}
+.banner {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.banner img {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.content .con-main {
+  width: 65%;
+  margin-right: 40px;
+}
+.content .con-main .main-cover {
+  width: 100%;
+  padding-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.content .con-main .main-cover .con-1 {
+  width: 32%;
+  position: relative;
+}
+.content .con-main .main-cover .con-1 img {
+  width: 100%;
+  height: 150px;
+}
+.content .con-main .main-cover .con-1 .tips {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #000000;
+  opacity: 0.8;
+  color: #FFFFFF;
+  bottom: 0px;
+  left: 0px;
+}
+.content .con-main .main-cover .con-1 .tips h2 {
+  font-size: 1.8rem;
+  margin: 10px;
+}
+.content .con-main .main-cover .con-1 .tips p {
+  font-size: 1.4rem;
+  margin: 10px;
+}
+.content .con-main hr {
+  border: 1px solid #DDDDDD;
+  width: 100%;
+}
+.content .con-main .title-mob {
+  width: 100%;
+  height: 150px;
+  display: none;
+  margin-bottom: 10px;
+}
+.content .con-main .tips3 {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: #000000;
+  opacity: 0.6;
+  color: #FFFFFF;
+  top: 340px;
+  left: 0px;
+  text-align: center;
+  display: none;
+}
+.content .con-main .tips3 h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+.content .con-main .tips3 p {
+  font-size: 1.4rem;
+}
+.content .con-main .main-list {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .con-main .main-list .con-2-tt {
+  width: 40%;
+}
+.content .con-main .main-list .con-2-tt img {
+  width: 100%;
+  height: 150px;
+}
+.content .con-main .main-list .con-2-con {
+  width: 55%;
+}
+.content .con-main .main-list .con-2-con h2 {
+  font-size: 2.8rem;
+}
+.content .con-main .main-list .con-2-con p {
+  font-size: 1.4rem;
+}
+.content .con-list {
+  width: 30%;
+  position: relative;
+}
+.content .con-list .title {
+  width: 100%;
+  height: 130px;
+}
+.content .con-list .tips2 {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  background: #000000;
+  opacity: 0.6;
+  color: #FFFFFF;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+}
+.content .con-list .tips2 h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+.content .con-list .tips2 p {
+  font-size: 1.4rem;
+}
+.content .con-list .con-3 {
+  margin-top: 10px;
+}
+.content .con-list .con-3 h2 {
+  font-size: 2.4rem;
+}
+.content .con-list .con-3 p {
+  font-size: 1.4rem;
+}
+.footer {
+  background-color: #262626;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+.ft-menu {
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .menu {
+    display: none;
+  }
+  .hd {
+    display: flex;
+    justify-content: center;
+  }
+  .banner img {
+    height: 100px;
+  }
+  .content {
+    width: 100%;
+    display: block;
+  }
+  .content .con-main {
+    width: 100%;
+  }
+  .content .con-main hr {
+    display: none;
+  }
+  .content .con-main .title-mob {
+    display: block;
+  }
+  .content .con-main .tips3 {
+    display: block;
+  }
+  .content .con-main .main-list {
+    width: 95%;
+    display: block;
+    padding: 2%;
+    border: 1px solid #C0C0C0;
+    overflow: hidden;
+    height: 150px;
+  }
+  .content .con-main .main-list .con-2-tt {
+    float: right;
+  }
+  .content .con-main .main-list .con-2-con {
+    float: left;
+  }
+  .content .con-list {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 72px;
+  }
+  .content .con-list .title {
+    display: block;
+  }
+  .content .con-list .tips2 {
+    display: none;
+  }
+  .content .con-list .con-3 {
+    padding: 10px;
+    border: 1px solid #C0C0C0;
+    margin-bottom: 10px;
+  }
+  .footer {
+    display: none;
+  }
+  .ft-menu {
+    width: 99%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    background: #EFEFEF;
+    border: 1px solid #BEBEBE;
+    position: fixed;
+    bottom: 0px;
+  }
+  .ft-menu span {
+    font-size: 2.8rem;
+  }
+  .ft-menu span:nth-child(1) {
+    margin-left: 20px;
+  }
+  .ft-menu span:nth-child(3) {
+    margin-right: 20px;
+  }
+}
