@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>响应式布局</title>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/task7.css">
+	</head>
+
+	<body>
+		<div class="hd">
+			<div class="logo">
+				LOGO
+			</div>
+			<div class="menu">
+				<span>Menu</span>
+				<span>Menu</span>
+				<span>Menu</span>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="images/scroll.png" alt="图片未加载">
+		</div>
+		<div class="content">
+			<div class="container" style="padding:0px">
+				<div class="row">
+					<div class="col-sm-9 col-xs-12" style="padding: 0px;">
+						<div class="container">
+							<div class="row row-1">
+								<div class="content-1 col-sm-4 col-xs-4" >
+									<img src="images/cover.jpg" class="cover-img"/>
+									<div class="tips">
+										<h4>标题标题</h4>
+										<p>正文正文正文</p>
+									</div>
+								</div>
+								<div class="content-1 col-sm-4 col-xs-4">
+									<img src="images/cover.jpg" />
+									<div class="tips">
+										<h4>标题标题</h4>
+										<p>正文正文正文</p>
+									</div>
+								</div>
+								<div class="content-1 col-sm-4 col-xs-4">
+									<img src="images/cover.jpg" />
+									<div class="tips">
+										<h4>标题标题</h4>
+										<p>正文正文正文</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<div class="row cover-mob">
+								<img src="images/title.jpg" class="title-mob">
+								<div class="tips3">
+									<h3>标题标题</h3>
+									<p>正文正文正文正文</p>
+								</div>
+							</div>
+							<div class="row con-list">
+								<div class="content-2-con col-sm-7  col-sm-push-5 col-xs-7">
+									<h2>标题标题标题</h2>
+									<p>
+										正文正文正文文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文
+									</p>
+								</div>
+								<div class="content-2 col-sm-5   col-sm-pull-7 col-xs-5">
+									<img src="images/cover.jpg" />
+								</div>
+								
+							</div>
+							<div class="row con-list">
+								<div class="content-2-con col-sm-7  col-sm-push-5 col-xs-7">
+									<h2>标题标题标题</h2>
+									<p>
+										正文正文正文文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文
+									</p>
+								</div>
+								<div class="content-2 col-sm-5   col-sm-pull-7 col-xs-5">
+									<img src="images/cover.jpg" />
+								</div>
+							</div>
+							<div class="row con-list">
+								<div class="content-2-con col-sm-7  col-sm-push-5 col-xs-7">
+									<h2>标题标题标题</h2>
+									<p>
+										正文正文正文文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文 正文正文正文正文正文正文正文正文
+									</p>
+								</div>
+								<div class="content-2 col-sm-5   col-sm-pull-7 col-xs-5">
+									<img src="images/cover.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="col-sm-3 col-xs-12" style="margin-right:-15px">
+						<img src="images/title.jpg" class="title">
+						<div class="tips2">
+							<h3>标题标题</h3>
+							<p>正文正文正文正文</p>
+						</div>
+						<div class="content-3">
+							<h3>标题标题标题标题标题标题</h1>
+							<p>40分钟前</p>
+						</div>
+						<div class="content-3">
+							<h3>标题标题标题标题标题标题标题标题标题标题标题标题</h1>
+							<p>40分钟前</p>
+						</div>
+						<div class="content-3">
+							<h3>标题标题标题标题标题标题标题标题</h1>
+							<p>40分钟前</p>
+						</div>
+						<div class="content-3">
+							<h3>标题标题标题标题标题标题标题标题标题</h1>
+							<p>40分钟前</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer">
+			Footer
+		</div>
+		<div class="ft-menu">
+			<span>Menu</span>
+			<span>Menu</span>
+			<span>Menu</span>
+		</div>
+		<script>
+			function init() {
+				var tips = document.getElementsByClassName('tips');
+				var cover = document.getElementsByClassName('cover-img')[0];
+				for(var i = 0;i < tips.length;i++) {
+					tips[i].style.width = cover.offsetWidth + 'px';
+				}
+				var tips2 = document.getElementsByClassName('tips2')[0];
+				var title = document.getElementsByClassName('title')[0];
+				tips2.style.width = title.offsetWidth + 'px';
+			}
+			init();
+			window.onresize = function() {
+				init();
+			}
+			
+		</script>
+	</body>
+
+</html>

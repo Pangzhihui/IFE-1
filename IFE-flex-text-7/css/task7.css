@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;	
+	font-family: "microsoft yahei";
+}
+.hd {
+	width: 100%;
+	padding: 10px 40px;
+	background: #000000;
+	overflow: auto;
+}
+.logo,.menu span {
+	font-size: 3.2rem;
+	color: #FFFFFF;
+}
+.logo {
+	float: left;
+}
+.menu {
+	float: right;
+}
+.menu span {
+	margin-left: 1rem;
+}
+.banner {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.banner img {
+	width: 100%;
+}
+.content {
+	margin-bottom:72px;
+}
+.container {
+	width: 100%;
+}
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.row-1 {
+	margin-left: -5px; 
+	margin-right:-5px
+}
+.content-1,.content-2,.content-2-con{
+	padding: 0 5px;
+}
+.content-1 {
+	position: relative;
+}
+.tips,.tips2,.tips3 {
+	position: absolute;
+    padding-left:10px ;
+    background: #000000;
+    opacity: 0.6;
+    color: #FFFFFF;
+}
+.tips {
+	bottom: 0px;
+	height: 40%;
+    left: 5px;
+    .h2 {
+        font-size: 1.8rem;
+        margin: 10px;
+    };
+    p {
+        font-size: 1.4rem;
+        margin: 10px;
+    }
+}
+.content-1 img{
+	width: 100%;
+	height:150px;
+}
+.content-2 img {
+	width: 100%;
+	height:150px;
+}
+hr {
+	margin-top: 20px;
+	border:1px solid #DDDDDD;
+}
+.con-list {
+	margin-top: 15px;
+}
+.title {
+	width: 100%;
+	height:130px;
+}
+.tips2 {       
+    height:130px;
+    top: 0px;
+    left: 0px;
+    text-align: center; 
+    margin-left: 15px;   
+}
+.tips2 h3 {
+	margin-top: 40px;
+}
+.title-mob {
+	width: 100%;
+	height:100px;
+	margin-top:10px;
+	display: none;
+}
+.cover-mob {
+	position: relative;
+}
+.tips3 {
+    width: 100%;       
+    height:100px;
+    top: 10px;
+    left: 0px;
+    text-align: center;
+    display: none;
+}
+.footer {
+	background-color: #262626;
+	width: 100%;
+	height:100px;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 20px;
+}
+.ft-menu {
+	display: none;
+}
+.ft-menu span {
+	font-size: 2.8rem;
+}
+h2 {
+	margin-top: 0px;
+}
+@media screen and (max-width:760px) {
+	.menu {
+		display: none;
+	}
+	.hd {
+		display: flex;
+		justify-content: center;
+	}
+	.banner img {
+        height: 100px;
+    }
+	hr {
+		display: none;
+	}
+	.con-list {
+		padding: 10px;
+		border: 1px solid #C0C0C0;
+		height:170px;
+		overflow: hidden;
+	}
+	.title {
+		display: none;
+	}
+	.tips2 {
+		display: none;
+	}
+	.content-3 {
+		padding: 10px;
+		border: 1px solid #C0C0C0;
+		margin-top: 15px;
+	}
+	.title-mob {
+		display: block;
+	}
+	.tips3 {
+		display: block;
+	}
+	.footer {
+		display: none;
+	}
+	.ft-menu {
+		width:100%;
+		padding: 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		background: #EFEFEF;
+		border: 1px solid #BEBEBE;
+		margin-top: 10px;
+		position: fixed;
+		bottom:0px;
+	}
+	
+}
