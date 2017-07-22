@@ -1,0 +1,73 @@
+<html>
+	  <head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		    <title>TodoList</title>
+		    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 			<link rel="icon" href="img/img.ico" type="image/x-icon" />
+    		<link rel="shortcut icon" href="img/img.ico" type="image/x-icon" />
+	  </head>
+
+	  <body>
+	  	  <div class="hd-one">
+	  	  	<div class="hd">Title</div>
+		    	<button class="btn-add" id="one-a">Add</button>
+	  	  </div>
+		    <div class="hd-add">
+		    	<div class="hd">Title</div>
+		    	<button class="btn-cancel" id="all-c">Cancel</button>
+		    	<button class="btn-add" id="all-d">Done</button>
+		    	<button class="btn-edit" id="all-e">Done</button>
+		    </div>
+		    <div class="onething">
+		    	<p class="tips">Now! The One Thing is </p>
+		    	<div class="list1">
+		    		<div class="task">
+				    	<span class="glyphicon glyphicon-play red"></span>
+				    	<div class="content">
+				    		Some Text about Task,Some Text about Task
+				    		Some Text about Task,Some Text about Task
+				    	</div>
+				    </div>
+		    	</div> 
+		    </div>
+		    <div class='all'>
+		    	<div class="pri">
+			    	<div class='pri-tag' d-id='高优'><span class="glyphicon glyphicon-exclamation-sign red-p"></span>高优</div>
+			    	<div class='pri-tag' d-id='中优'><span class="glyphicon glyphicon-exclamation-sign yellow-p"></span>中优</div>
+			    	<div class='pri-tag' d-id='低优'><span class="glyphicon glyphicon-exclamation-sign green-p"></span>低优</div>
+			    </div>
+			    <div class="sta">
+			    	<div class='sta-tag' d-id='进行中'><span class="glyphicon glyphicon-play state"></span>进行中</div>
+			    	<div class='sta-tag' d-id='待办'><span class="glyphicon glyphicon-pause state"></span>待办</div>
+			    	<div class='sta-tag' d-id='已完成'><span class="glyphicon glyphicon-stop state"></span>已完成</div>
+			    </div>
+			    <div class="list">
+			    	
+			    </div>
+		    </div>
+		    <div class="add">
+		    	<div class="pri">
+			    	<div class='pri-tag' id='高优'><span class="glyphicon glyphicon-exclamation-sign red-p"></span>高优</div>
+			    	<div class='pri-tag' id='中优'><span class="glyphicon glyphicon-exclamation-sign yellow-p"></span>中优</div>
+			    	<div class='pri-tag' id='低优'><span class="glyphicon glyphicon-exclamation-sign green-p"></span>低优</div>
+			    </div>
+			    <div class="sta">
+			    	<div class='sta-tag' id='进行中'><span class="glyphicon glyphicon-play state"></span>进行中</div>
+			    	<div class='sta-tag' id='待办'><span class="glyphicon glyphicon-pause state"></span>待办</div>
+			    	<div class='sta-tag' id='已完成'><span class="glyphicon glyphicon-stop state"></span>已完成</div>
+			    </div>
+			    <div class="task">
+			    	<textarea class="content" id='content'></textarea>
+			    </div>
+			  </div>
+		    <div class="footer">
+		    	 <div class="btn-l">One Thing</div>
+		    	 <div class="btn-r">All</div>
+		    </div>
+		    <script src="js/jquery.min.js"></script>
+		    <script src="js/hammer.min.js"></script>
+    		<script src="js/jquery.hammer.js"></script>
+		    <script src="/static/bundle.js"></script>
+	  </body>
+</html>

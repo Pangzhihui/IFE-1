@@ -1,0 +1,82 @@
+@color: #D9D9D9;
+@mp: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;   
+    font-family: "microsoft yahei";
+}
+.bg(@width:100%,@height:50px) {
+    background: @color;
+    width:@width;
+    height:@height;
+}
+.hd {
+    position: relative;
+    font-size: 2.8rem;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: @mp;
+    .bg;
+}
+.btn-add,.btn-edit {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top: @mp;
+    right: 20px;
+    font-size: 1.6rem;
+}
+.btn-edit {
+    display: none;
+}
+.tips {
+    font-size: 3rem;
+    padding-left: @mp;
+}
+.task {
+    border: 1px solid #C6C6C6;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 97px;
+    padding: @mp;
+    margin: @mp auto;
+    position: relative;
+    overflow: hidden;
+    .red,.yellow,.green {
+        font-size: 1.8rem;
+        margin-right:@mp;
+    }
+    .red {
+        color:#CF031F;
+    }
+    .yellow {
+        color: #F7E739;
+    }
+    .green {
+        color: #41750C;
+    }
+    .content {
+        font-size: 1.8rem;
+    }
+}
+.footer {
+    .bg;
+    position: fixed;
+    bottom: 0px;
+    margin-top: 60px;
+    display: flex;
+    .btn-l,.btn-r {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .btn-l {
+        background: #ADADAD;
+    }
+}
+
