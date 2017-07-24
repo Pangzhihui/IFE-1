@@ -1,11 +1,11 @@
 require('./css/app.less');
 require('./css/add.less');
 require('./css/all.less');
-require('./add.js');
-require('./all.js');
+require('./js/add.js');
+require('./js/all.js');
 var $ = require('jquery');
-var showList = require('./showAll.js');
-var showOne = require('./showOne.js');
+var showList = require('./js/showAll.js');
+var showOne = require('./js/showOne.js');
 
 showOne();
 $('#one-a').click(()=>{
