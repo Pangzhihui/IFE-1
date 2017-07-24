@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "23b78933002438057913"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "17ca1b462f9eab2b3d31"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -9286,20 +9286,19 @@
 			for (var i = 0; i < pritag.length; i++) {
 				pritag[i].className = 'pri-tag';
 			}
-
+			//选择状态
 			var statag = all.getElementsByClassName('sta-tag');
 			for (var _i = 0; _i < statag.length; _i++) {
 				statag[_i].className = 'sta-tag';
 			}
 			$('.list').empty();
 			var taskList = JSON.parse(localStorage.getItem('taskList'));
-			if (taskList.length == 0) {
+			if (localStorage.flag1 == undefined) {
 				$('.list').append('目前没有任务');
 			} else {
 				for (var _i2 = 0; _i2 < taskList.length; _i2++) {
 					var pri = taskList[_i2].pri;
 					var sta = taskList[_i2].sta;
-					//				console.log(pri,sta);
 					var color = '';
 					var font = '';
 					switch (pri) {
@@ -9447,7 +9446,7 @@
 		$('.btn-r').css('background', '#D9D9D9');
 		$('.list1').empty();
 		var taskList = JSON.parse(localStorage.getItem('taskList'));
-		if (taskList.length == 0) {
+		if (localStorage.flag1 == undefined) {
 			$('.list1').append('目前没有任务');
 		} else {
 			for (var i = 0; i < taskList.length; i++) {

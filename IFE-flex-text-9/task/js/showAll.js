@@ -27,20 +27,19 @@ module.exports = function () {
 		for(let i = 0;i < pritag.length;i++) {
 			pritag[i].className = 'pri-tag';	
 		}
-		
+		//选择状态
 		var statag = all.getElementsByClassName('sta-tag');
 		for(let i = 0;i < statag.length;i++) {
 			statag[i].className = 'sta-tag';
 		}
 		$('.list').empty();
 		var taskList = JSON.parse(localStorage.getItem('taskList'));
-		if(taskList.length == 0) {
+		if(localStorage.flag1 == undefined) {
 			$('.list').append ('目前没有任务');
 		}else{
 			for (let i = 0;i < taskList.length;i++) {
 				var pri = taskList[i].pri;
 				var sta = taskList[i].sta;
-//				console.log(pri,sta);
 				var color = '';
 				var font ='';
 				switch(pri) {
