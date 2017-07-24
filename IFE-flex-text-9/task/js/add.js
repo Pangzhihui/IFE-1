@@ -26,7 +26,6 @@ $('#all-d').click(()=>{
 	var taskList = JSON.parse(localStorage.getItem('taskList'));
 	taskList.push(list);
 	localStorage.setItem('taskList',JSON.stringify(taskList));
-	console.log(localStorage.flag1,taskList[1].pri);
 	
 	showList();
 })

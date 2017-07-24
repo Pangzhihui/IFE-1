@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4bbf30880109c6222166"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "23b78933002438057913"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8562,7 +8562,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font-size: 62.5%;\n  font-family: \"microsoft yahei\";\n}\n.hd {\n  position: relative;\n  font-size: 2.8rem;\n  text-align: center;\n  line-height: 50px;\n  margin-bottom: 10px;\n  background: #D9D9D9;\n  width: 100%;\n  height: 50px;\n}\n.btn-add,\n.btn-edit {\n  position: absolute;\n  width: 60px;\n  height: 30px;\n  top: 10px;\n  right: 20px;\n  font-size: 1.6rem;\n}\n.btn-edit {\n  display: none;\n}\n.tips {\n  font-size: 3rem;\n  padding-left: 10px;\n}\n.task {\n  border: 1px solid #C6C6C6;\n  display: flex;\n  align-items: center;\n  width: 95%;\n  height: 97px;\n  padding: 10px;\n  margin: 10px auto;\n  position: relative;\n  overflow: hidden;\n}\n.task .red,\n.task .yellow,\n.task .green {\n  font-size: 1.8rem;\n  margin-right: 10px;\n}\n.task .red {\n  color: #CF031F;\n}\n.task .yellow {\n  color: #F7E739;\n}\n.task .green {\n  color: #41750C;\n}\n.task .content {\n  font-size: 1.8rem;\n}\n.footer {\n  background: #D9D9D9;\n  width: 100%;\n  height: 50px;\n  position: fixed;\n  bottom: 0px;\n  margin-top: 60px;\n  display: flex;\n}\n.footer .btn-l,\n.footer .btn-r {\n  flex: 1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.8rem;\n  font-weight: bold;\n}\n.footer .btn-l {\n  background: #ADADAD;\n}\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font-size: 62.5%;\n  font-family: \"microsoft yahei\";\n}\n.hd {\n  position: relative;\n  font-size: 2.8rem;\n  text-align: center;\n  line-height: 50px;\n  margin-bottom: 10px;\n  background: #D9D9D9;\n  width: 100%;\n  height: 50px;\n}\n.btn-add,\n.btn-edit {\n  position: absolute;\n  width: 60px;\n  height: 30px;\n  top: 10px;\n  right: 20px;\n  font-size: 1.6rem;\n}\n.btn-edit {\n  display: none;\n}\n.tips {\n  font-size: 3rem;\n  padding-left: 10px;\n}\n.list1 {\n  font-size: 1.8rem;\n}\n.task {\n  border: 1px solid #C6C6C6;\n  display: flex;\n  align-items: center;\n  width: 95%;\n  height: 97px;\n  padding: 10px;\n  margin: 10px auto;\n  position: relative;\n  overflow: hidden;\n}\n.task .red,\n.task .yellow,\n.task .green {\n  font-size: 1.8rem;\n  margin-right: 10px;\n}\n.task .red {\n  color: #CF031F;\n}\n.task .yellow {\n  color: #F7E739;\n}\n.task .green {\n  color: #41750C;\n}\n.task .content {\n  font-size: 1.8rem;\n}\n.footer {\n  background: #D9D9D9;\n  width: 100%;\n  height: 50px;\n  position: fixed;\n  bottom: 0px;\n  margin-top: 60px;\n  display: flex;\n}\n.footer .btn-l,\n.footer .btn-r {\n  flex: 1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.8rem;\n  font-weight: bold;\n}\n.footer .btn-l {\n  background: #ADADAD;\n}\n", ""]);
 
 	// exports
 
@@ -9227,7 +9227,6 @@
 		var taskList = JSON.parse(localStorage.getItem('taskList'));
 		taskList.push(list);
 		localStorage.setItem('taskList', JSON.stringify(taskList));
-		console.log(localStorage.flag1, taskList[1].pri);
 
 		showList();
 	});
@@ -9287,20 +9286,20 @@
 			for (var i = 0; i < pritag.length; i++) {
 				pritag[i].className = 'pri-tag';
 			}
-			//选择状态
+
 			var statag = all.getElementsByClassName('sta-tag');
 			for (var _i = 0; _i < statag.length; _i++) {
 				statag[_i].className = 'sta-tag';
 			}
 			$('.list').empty();
 			var taskList = JSON.parse(localStorage.getItem('taskList'));
-			if (localStorage.flag1 == undefined) {
+			if (taskList.length == 0) {
 				$('.list').append('目前没有任务');
 			} else {
 				for (var _i2 = 0; _i2 < taskList.length; _i2++) {
 					var pri = taskList[_i2].pri;
 					var sta = taskList[_i2].sta;
-					console.log(pri, sta);
+					//				console.log(pri,sta);
 					var color = '';
 					var font = '';
 					switch (pri) {
@@ -9448,7 +9447,7 @@
 		$('.btn-r').css('background', '#D9D9D9');
 		$('.list1').empty();
 		var taskList = JSON.parse(localStorage.getItem('taskList'));
-		if (localStorage.flag1 == undefined) {
+		if (taskList.length == 0) {
 			$('.list1').append('目前没有任务');
 		} else {
 			for (var i = 0; i < taskList.length; i++) {

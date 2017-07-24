@@ -8,7 +8,7 @@ module.exports = function () {
 	$('.btn-r').css('background','#D9D9D9');
 	$('.list1').empty();
 	var taskList = JSON.parse(localStorage.getItem('taskList'));
-	if(localStorage.flag1 == undefined) {
+	if(taskList.length == 0) {
 		$('.list1').append ('目前没有任务');
 	}else{
 		for (let i = 0;i < taskList.length;i++) {
