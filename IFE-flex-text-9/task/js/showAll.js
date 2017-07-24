@@ -6,9 +6,11 @@ module.exports = function () {
 		$('.list .task').each(function(){
 			$(this).hammer().bind("swipeleft",function(){
 				$(this).children().eq(2).animate({right:'0px'});
+				$(this).children().eq(3).animate({left:'-300px'});
 			})
 			$(this).hammer().bind("swiperight",function(){
 				$(this).children().eq(3).animate({left:'0px'});
+				$(this).children().eq(2).animate({right:'-300px'});
 			})
 			$(this).hammer().bind("tap",function(){
 				$(this).children().eq(3).animate({left:'-300px'});

@@ -3,25 +3,8 @@ var showList = require('./showAll.js');
 $('.btn-l').click(()=>{
 	showOne();
 })
-function bind() {
 
-		$('.list .task').each(function(){
-			$(this).hammer().bind("swipeleft",function(){
-				$(this).children().eq(2).animate({right:'0px'});
-			})
-			$(this).hammer().bind("swiperight",function(){
-				$(this).children().eq(3).animate({left:'0px'});
-			})
-			$(this).hammer().bind("tap",function(){
-				$(this).children().eq(3).animate({left:'-300px'});
-				$(this).children().eq(2).animate({right:'-300px'});
-			})
-		});
-		
-		
-	}
 function showTask(id,font,color,content) {
-	
 	$('.list').append (`
 		<div class="task" id=${id}>
 	    	<span class="glyphicon ${font} ${color}"></span>
@@ -39,8 +22,8 @@ function showTask(id,font,color,content) {
 		    </div>
 		</div>
 	`)
-	bind();
 }
+
 function showSearch() {
 	$('.list').empty();
 	var taskList = JSON.parse(localStorage.getItem('taskList'));
@@ -112,21 +95,20 @@ function showSearch() {
 
 
 //选择优先级
-var all = document.getElementsByClassName('all')[0];
-var pritag = all.getElementsByClassName('pri-tag');
+
 var priNum = [];
 var staNum = [];
-
-for(let i = 0;i < pritag.length;i++) {
-	pritag[i].addEventListener('click',function(){
-		if(this.className != 'pri-tag choose'){
-			this.className += ' '+'choose';
-			priNum.push(this.getAttribute('d-id')) ;
+var pri = document.getElementById('pri');
+pri.addEventListener('click',function(e){
+	if(e.target.className == 'pri-tag choose'||e.target.className == 'pri-tag') {
+		if(e.target.className != 'pri-tag choose'){
+			e.target.className += ' '+'choose';
+			priNum.push(e.target.getAttribute('d-id')) ;
 			showSearch();
 		}
 		else {
-			this.className = 'pri-tag';
-			var id = this.getAttribute('d-id');
+			e.target.className = 'pri-tag';
+			var id = e.target.getAttribute('d-id');
 			for(let i = 0;i <= priNum.length; i++) {
 				if(priNum[i] == id) {
 					priNum.splice(i,1);
@@ -135,22 +117,21 @@ for(let i = 0;i < pritag.length;i++) {
 			showSearch();
 			
 		}	
-	})
-}
-
+	}
+})
 
 //选择状态
-var statag = all.getElementsByClassName('sta-tag');
-for(let i = 0;i < statag.length;i++) {
-	statag[i].addEventListener('click',function(){
-		if(this.className != 'sta-tag choose'){
-			this.className += ' '+'choose';
-			staNum.push(this.getAttribute('d-id')) ;
+var sta = document.getElementById('sta');
+sta.addEventListener('click',function(e){
+	if(e.target.className == 'sta-tag choose' || e.target.className == 'sta-tag') {
+		if(e.target.className != 'sta-tag choose'){
+			e.target.className += ' '+'choose';
+			staNum.push(e.target.getAttribute('d-id')) ;
 			showSearch();
 		}
 		else {
-			this.className = 'sta-tag';
-			var id = this.getAttribute('d-id');
+			e.target.className = 'sta-tag';
+			var id = e.target.getAttribute('d-id');
 			for(let i = 0;i <= staNum.length; i++) {
 				if(staNum[i] == id) {
 					staNum.splice(i,1);
@@ -158,6 +139,6 @@ for(let i = 0;i < statag.length;i++) {
 			}
 			showSearch();
 		}
-	})
-}
+	}
+})
 

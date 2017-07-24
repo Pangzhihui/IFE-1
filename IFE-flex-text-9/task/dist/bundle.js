@@ -835,9 +835,11 @@
 			$('.list .task').each(function () {
 				$(this).hammer().bind("swipeleft", function () {
 					$(this).children().eq(2).animate({ right: '0px' });
+					$(this).children().eq(3).animate({ left: '-300px' });
 				});
 				$(this).hammer().bind("swiperight", function () {
 					$(this).children().eq(3).animate({ left: '0px' });
+					$(this).children().eq(2).animate({ right: '-300px' });
 				});
 				$(this).hammer().bind("tap", function () {
 					$(this).children().eq(3).animate({ left: '-300px' });
@@ -1045,26 +1047,11 @@
 	$('.btn-l').click(function () {
 		showOne();
 	});
-	function bind() {
 
-		$('.list .task').each(function () {
-			$(this).hammer().bind("swipeleft", function () {
-				$(this).children().eq(2).animate({ right: '0px' });
-			});
-			$(this).hammer().bind("swiperight", function () {
-				$(this).children().eq(3).animate({ left: '0px' });
-			});
-			$(this).hammer().bind("tap", function () {
-				$(this).children().eq(3).animate({ left: '-300px' });
-				$(this).children().eq(2).animate({ right: '-300px' });
-			});
-		});
-	}
 	function showTask(id, font, color, content) {
-
 		$('.list').append('\n\t\t<div class="task" id=' + id + '>\n\t    \t<span class="glyphicon ' + font + ' ' + color + '"></span>\n\t    \t<div class="content">\n\t    \t\t' + content + '\n\t    \t</div>\n\t    \t<div class="right">\n\t\t    \t<div class="op-edit">\u7F16\u8F91</div>\n\t\t    \t<div class="op-del">\u5220\u9664</div>\n\t\t    </div>\n\t\t    <div class="left">\n\t\t    \t<div class="op-1">\u5DF2\u5B8C\u6210</div>\n\t\t    \t<div class="op-2">\u5F85\u529E</div>\n\t\t    \t<div class="op-3">\u8FDB\u884C\u4E2D</div>\n\t\t    </div>\n\t\t</div>\n\t');
-		bind();
 	}
+
 	function showSearch() {
 		$('.list').empty();
 		var taskList = JSON.parse(localStorage.getItem('taskList'));
@@ -1128,50 +1115,49 @@
 	}
 
 	//选择优先级
-	var all = document.getElementsByClassName('all')[0];
-	var pritag = all.getElementsByClassName('pri-tag');
+
 	var priNum = [];
 	var staNum = [];
-
-	for (var i = 0; i < pritag.length; i++) {
-		pritag[i].addEventListener('click', function () {
-			if (this.className != 'pri-tag choose') {
-				this.className += ' ' + 'choose';
-				priNum.push(this.getAttribute('d-id'));
+	var pri = document.getElementById('pri');
+	pri.addEventListener('click', function (e) {
+		if (e.target.className == 'pri-tag choose' || e.target.className == 'pri-tag') {
+			if (e.target.className != 'pri-tag choose') {
+				e.target.className += ' ' + 'choose';
+				priNum.push(e.target.getAttribute('d-id'));
 				showSearch();
 			} else {
-				this.className = 'pri-tag';
-				var id = this.getAttribute('d-id');
-				for (var _i = 0; _i <= priNum.length; _i++) {
-					if (priNum[_i] == id) {
-						priNum.splice(_i, 1);
+				e.target.className = 'pri-tag';
+				var id = e.target.getAttribute('d-id');
+				for (var i = 0; i <= priNum.length; i++) {
+					if (priNum[i] == id) {
+						priNum.splice(i, 1);
 					}
 				}
 				showSearch();
 			}
-		});
-	}
+		}
+	});
 
 	//选择状态
-	var statag = all.getElementsByClassName('sta-tag');
-	for (var _i2 = 0; _i2 < statag.length; _i2++) {
-		statag[_i2].addEventListener('click', function () {
-			if (this.className != 'sta-tag choose') {
-				this.className += ' ' + 'choose';
-				staNum.push(this.getAttribute('d-id'));
+	var sta = document.getElementById('sta');
+	sta.addEventListener('click', function (e) {
+		if (e.target.className == 'sta-tag choose' || e.target.className == 'sta-tag') {
+			if (e.target.className != 'sta-tag choose') {
+				e.target.className += ' ' + 'choose';
+				staNum.push(e.target.getAttribute('d-id'));
 				showSearch();
 			} else {
-				this.className = 'sta-tag';
-				var id = this.getAttribute('d-id');
-				for (var _i3 = 0; _i3 <= staNum.length; _i3++) {
-					if (staNum[_i3] == id) {
-						staNum.splice(_i3, 1);
+				e.target.className = 'sta-tag';
+				var id = e.target.getAttribute('d-id');
+				for (var i = 0; i <= staNum.length; i++) {
+					if (staNum[i] == id) {
+						staNum.splice(i, 1);
 					}
 				}
 				showSearch();
 			}
-		});
-	}
+		}
+	});
 
 /***/ }),
 /* 15 */
