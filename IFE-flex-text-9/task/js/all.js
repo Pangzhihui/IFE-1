@@ -3,6 +3,23 @@ var showList = require('./showAll.js');
 $('.btn-l').click(()=>{
 	showOne();
 })
+function bind() {
+
+		$('.list .task').each(function(){
+			$(this).hammer().bind("swipeleft",function(){
+				$(this).children().eq(2).animate({right:'0px'});
+			})
+			$(this).hammer().bind("swiperight",function(){
+				$(this).children().eq(3).animate({left:'0px'});
+			})
+			$(this).hammer().bind("tap",function(){
+				$(this).children().eq(3).animate({left:'-300px'});
+				$(this).children().eq(2).animate({right:'-300px'});
+			})
+		});
+		
+		
+	}
 function showTask(id,font,color,content) {
 	
 	$('.list').append (`
@@ -22,6 +39,7 @@ function showTask(id,font,color,content) {
 		    </div>
 		</div>
 	`)
+	bind();
 }
 function showSearch() {
 	$('.list').empty();

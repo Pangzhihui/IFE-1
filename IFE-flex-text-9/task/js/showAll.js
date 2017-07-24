@@ -10,7 +10,12 @@ module.exports = function () {
 			$(this).hammer().bind("swiperight",function(){
 				$(this).children().eq(3).animate({left:'0px'});
 			})
+			$(this).hammer().bind("tap",function(){
+				$(this).children().eq(3).animate({left:'-300px'});
+				$(this).children().eq(2).animate({right:'-300px'});
+			})
 		});
+		
 		
 	}
 	
